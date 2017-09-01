@@ -7,6 +7,8 @@ import {push} from 'react-router-redux'
 const Home = props => {
   return (
     <div>
+      Hello World
+      <button className="btn btn-primary">Spectre is working!</button>
     </div>
   )
 }
