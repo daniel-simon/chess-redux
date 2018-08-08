@@ -1,10 +1,9 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {withRouter} from 'react-router'
-import {push} from 'react-router-redux'
+import React from "react"
+import { connect } from "react-redux"
+import { withRouter } from "react-router"
+import { push } from "react-router-redux"
 
-
-const Home = props => {
+const Home = (props) => {
   return (
     <div className="container">
       <div className="columns">
@@ -23,14 +22,17 @@ const Home = props => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-  }
+const mapStateToProps = (state) => {
+  return {}
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-  }
+const mapDispatchToProps = (dispatch) => {
+  return {}
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Home)
+)

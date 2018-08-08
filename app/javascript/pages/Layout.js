@@ -1,28 +1,21 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { push } from 'react-router-redux'
-import { withRouter } from 'react-router'
+import React from "react"
+import { connect } from "react-redux"
+import { push } from "react-router-redux"
+import { withRouter } from "react-router"
 
-
-const Layout = ({
-  goTo,
-  children
-}) => {
-  return(
+const Layout = ({ goTo, children }) => {
+  return (
     <div>
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   )
 }
 
-const mapStateToProps = state => {
-  return {
-  }
+const mapStateToProps = (state) => {
+  return {}
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     goTo: (e, path) => {
       e.preventDefault()
@@ -31,4 +24,9 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Layout))
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Layout)
+)
